@@ -1,0 +1,29 @@
+@(products: List[models.Product])
+
+@main("Products"){
+
+
+    <header>                
+
+                <div class="row">
+                   
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                
+                            <div class="caption">
+                                @for(p <- products) {
+                                <div>
+                                <h4>@p.getId</h4>
+                                <h4>@p.getName</h4>
+                                <p>@p.getDescription</p>
+                                <p>&euro; @("%.2f".format(p.getPrice))</p>
+                                </div>
+                                }
+                            </div>
+                        
+                    </div>
+                 </div>
+
+</header>
+    }
+
+
